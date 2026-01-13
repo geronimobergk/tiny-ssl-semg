@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiny-ssl-semg"
+version = "0.1.0"
+description = "Self-Supervised Temporal Representation Learning for Energy-Efficient sEMG Gesture Decoding"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["tiny-ssl-semg*"]
+exclude = ["tests*"]
